@@ -1,0 +1,12 @@
+{
+  "name": "tailwindui.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx node-sass -w style.scss style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
