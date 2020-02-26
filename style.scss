@@ -7,15 +7,21 @@ $breakpoint: 800px;
 }
 
 body {
+  width: 100%;
   overflow: hidden;
   font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI,
     Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
     Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
+.container {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
 .scroll-bg {
   min-height: 100vh;
-  width: 100%;
   position: absolute;
   display: block;
   height: 400%;
@@ -33,16 +39,17 @@ body {
 }
 
 .main {
+  width: 100%;
   position: relative;
   z-index: 2;
-  display: flex;
-  align-items: center;
-  background-color: #0c1021;
-
   min-height: 60vh;
+
+  background-color: #0c1021;
   color: #fff;
 
   @media screen and (min-width: $breakpoint) {
+    display: flex;
+    align-items: center;
     height: 100vh;
     max-width: 60%;
   }
@@ -61,6 +68,8 @@ body {
 }
 
 .logo {
+  display: inline-block;
+  margin: 1rem 0;
   transition: opacity 0.3s;
 
   &:hover {
@@ -83,17 +92,21 @@ body {
 
 .subtitle {
   font-size: 1.4rem;
-  font-size: 2.5vmin;
+  font-size: 2vmax;
   color: hsl(0, 0%, 90%);
   line-height: 1.3;
   margin-bottom: 5rem;
+
+  @media screen and (min-width: $breakpoint) {
+    font-size: 2.5vmin;
+  }
 }
 
 .button {
   display: inline-block;
   margin-bottom: 1rem;
   padding: 1rem 2rem;
-  margin-right: 0.5rem;
+  margin-right: 0.6rem;
   font-size: 1.2rem;
   border-radius: 10px;
   text-decoration: none;
